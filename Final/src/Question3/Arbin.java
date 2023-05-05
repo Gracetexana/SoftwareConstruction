@@ -12,4 +12,5 @@ public interface Arbin {
     public void calculateValues(); //sets the values of the current node as follows:
         //if the current node is a leaf, randomly assigns a value between 0 and 5
         //if the node is not a leaf, assigns the value to be the sum of its left and right nodes
+    public int compare(Arbin leftChild);
 }
