@@ -29,8 +29,33 @@ public class Question1<T extends Comparable> {
             }
 
             return result;
-        }
+        }        
+    }
 
-        
+    public T[] part2(T[] a) throws Exception{
+        int len = a.length;
+
+        if (len == 0){
+            throw new Exception("The array is empty");
+
+        } else{
+            for (int i=0; i<len; i++){
+                T max = a[0];
+                int maxIndex = 0;
+
+                for (int j=1; j<len; j++){
+                    if (max.compareTo(a[j]) < 0){
+                        max = a[j];
+                        maxIndex = j;
+                    }
+                }
+
+                a[maxIndex] = a[len-1];
+                a[len-1] = max;
+                len--;
+            }
+
+            return a;
+        }      
     }
 }
