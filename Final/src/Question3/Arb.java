@@ -1,16 +1,61 @@
 package Question3;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Arb implements Arbin{
     private int value;
-    private Arb left;
-    private Arb right;
+    private Arbin left;
+    private Arbin right;
 
-    public Arb(int value){
-        this.value = value;
-        this.left = null;
-        this.right = null;
+    public static void main(String[] args){
+        Random random = new Random();
+        int numberOfNodes = random.nextInt(11) + 10;
+
+        ArrayList<Arbin> tree = new ArrayList<>();
+        Arb mainNode = new Arb();
+        tree.add(mainNode);
+
+        for (int i=1; i<numberOfNodes; i++){
+            
+            int whichNode = random.nextInt(tree.size());
+
+            int leftOrRight = random.nextInt(2);
+
+            Arbin thisNode = tree.get(whichNode);
+
+
+            while (true){
+                if (leftOrRight == 0){
+                    if (thisNode.existsLeftChild()){
+                        thisNode = thisNode.leftChild();
+                    } else {
+                        thisNode.createLeftChild();
+                        tree.add(thisNode.leftChild());
+                        break;
+                    }
+                }
+
+                if (leftOrRight == 1){
+                    if (thisNode.existsRightChild()){
+                        thisNode = thisNode.rightChild();
+                    } else {
+                        thisNode.createRightChild();
+                        tree.add(thisNode.rightChild());
+                        break;
+                    }
+                }
+            }
+        }
+
+        mainNode.calculateValues();
+
+        // the instructions do not say that I have to print the values in any particular order, so I will be printing them in the order that they were created
+
+        for (Arbin node : tree){
+            System.out.println(node.content());
+        }
+
     }
 
     @Override
@@ -45,14 +90,12 @@ public class Arb implements Arbin{
 
     @Override
     public void createLeftChild() {
-        // because this method was not described as having a parameter, I chose 0 as the default value for any new node created this way
-        left = new Arb(0);
+        left = new Arb();
     }
 
     @Override
     public void createRightChild() {
-        // because this method was not described as having a parameter, I chose 0 as the default value for any new node created this way
-        right = new Arb(0);
+        right = new Arb();
     }
 
     @Override
@@ -78,12 +121,16 @@ public class Arb implements Arbin{
             value = random.nextInt(6);
 
         } else if (!existsLeftChild()){
+            rightChild().calculateValues();
             value = right.content();
 
         } else if (!existsRightChild()){
+            leftChild().calculateValues();
             value = left.content();
 
         } else {
+            leftChild().calculateValues();
+            rightChild().calculateValues();
             value = left.content() + right.content();
         }
     }
