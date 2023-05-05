@@ -134,5 +134,55 @@ public class Arb implements Arbin{
             value = left.content() + right.content();
         }
     }
+
+    /**
+     * determines whether this is a terminating node
+     * @return true if this node is a terminating node or false otherwise
+     */
+    public boolean isLeaf(){
+        return (left == null && right == null);
+    }
+
+    public int compare(Arbin other){
+        if (other instanceof Arb){
+            Arb otherNode = (Arb) other;
+
+            // check if the values are the same
+            if (otherNode.value != this.value){
+                return 1;
+
+            // check if the branches both terminate here
+            } else {
+                if (otherNode.isLeaf() && this.isLeaf()){
+                    return 0;
+
+                // check if one branch continues while the other does not
+                } else if ((otherNode.left == null 
+                        ^ this.left == null) 
+                    || (otherNode.right == null 
+                        ^ this.right == null)){
+                    return 1;
+
+                // check left side if right side ends
+                } else if (otherNode.left != null
+                    && otherNode.right == null){
+                        return otherNode.leftChild().compare(this.leftChild());
+
+                // check right side if left side ends
+                } else if (otherNode.left == null
+                    && otherNode.right != null){
+                        return otherNode.rightChild().compare(this.rightChild());
+
+                // check both sides
+                } else {
+                    return Math.min(1, (otherNode.leftChild().compare(this.leftChild()) + otherNode.rightChild().compare(this.rightChild())));
+                }
+            }
+
+
+        }
+
+        return 1;
+    }
     
 }
