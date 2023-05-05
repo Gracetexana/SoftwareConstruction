@@ -1,4 +1,7 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Question1<T extends Comparable> {
     public T[] part1(T[] a) throws Exception{
@@ -57,5 +60,19 @@ public class Question1<T extends Comparable> {
 
             return a;
         }      
+    }
+
+    public ArrayList<T> part3(T[] a) throws Exception{
+        int len = a.length;
+
+        if (len == 0){
+            throw new Exception("The array is empty");
+
+        } else{
+            ArrayList<T> result = new ArrayList<>();
+            Collections.sort(result);
+
+            return result;
+        }        
     }
 }
