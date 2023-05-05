@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class Question2 {
+    // I simply used my code from the corresponding homework assignment for this question
+
     /**
      * recursively splits an array in half until it is only one element long, recombines each split so that the result is in ascending order
      * @param array the array to be sorted

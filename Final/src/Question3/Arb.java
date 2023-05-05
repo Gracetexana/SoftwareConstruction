@@ -137,12 +137,14 @@ public class Arb implements Arbin{
 
     /**
      * determines whether this is a terminating node
+     * I brought this method over from my code from our binary trees assignment in order to make my compare method easier
      * @return true if this node is a terminating node or false otherwise
      */
     public boolean isLeaf(){
         return (left == null && right == null);
     }
 
+    // this code is based on my code from my equals method when we worked on binary trees
     public int compare(Arbin other){
         if (other instanceof Arb){
             Arb otherNode = (Arb) other;

@@ -4,6 +4,12 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class Question1<T extends Comparable> {
+    /**
+     * takes into argument one unsorted array to sort
+     * @param a the array to be sorted
+     * @return a new array that is the sorted version of the old
+     * @throws Exception if the array is empty
+     */
     public T[] part1(T[] a) throws Exception{
         int len = a.length;
 
@@ -26,6 +32,7 @@ public class Question1<T extends Comparable> {
 
                 result[i] = min;
                 
+                // the instructions did not say that the original array had to remain as is. This makes it easier for me to iterate through
                 a[minIndex] = a[len-1];
                 a[len-1] = min;
                 len--;
@@ -35,6 +42,12 @@ public class Question1<T extends Comparable> {
         }        
     }
 
+    /**
+     * sorts an array and returns the sorted version of that array
+     * @param a the array to be  sorted
+     * @return the sorted array
+     * @throws Exception if the array is empt
+     */
     public T[] part2(T[] a) throws Exception{
         int len = a.length;
 
@@ -62,6 +75,12 @@ public class Question1<T extends Comparable> {
         }      
     }
 
+    /**
+     * sorts an array but returns it as a sorted ArrayList
+     * @param a the array to be sorted
+     * @return a sorted ArrayList with all the same elements as a
+     * @throws Exception if the array is empty
+     */
     public ArrayList<T> part3(T[] a) throws Exception{
         int len = a.length;
 
