@@ -52,4 +52,8 @@ public class Question2 {
         }
         return results;
     }
+
+    /*
+     * If forced to choose between tackling this problem using ArrayLists or LinkedLists, I would choose ArrayLists. In fact, I would choose ArrayList over working with arrays as well. They are much more malleable than arrays. I would choose ArrayLists over LinkedLists because I am more familiar with them, and they seem more intuitive to use in this situation.
+     */
 }
