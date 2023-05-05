@@ -1,3 +1,8 @@
+/*
+* Grace Texana Long Torales
+* gtl1500@g.rit.edu
+*/
+
 package Question3;
 public interface Arbin {
     public int content(); //returns the value of the current node

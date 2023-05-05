@@ -1,6 +1,10 @@
+/*
+* Grace Texana Long Torales
+* gtl1500@g.rit.edu
+*/
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Question1<T extends Comparable> {

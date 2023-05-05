@@ -1,3 +1,8 @@
+/*
+* Grace Texana Long Torales
+* gtl1500@g.rit.edu
+*/
+
 import java.util.Arrays;
 
 public class Question2 {

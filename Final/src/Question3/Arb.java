@@ -1,3 +1,8 @@
+/*
+* Grace Texana Long Torales
+* gtl1500@g.rit.edu
+*/
+
 package Question3;
 
 import java.util.ArrayList;
