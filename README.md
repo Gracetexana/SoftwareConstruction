@@ -11,8 +11,13 @@ I enrolled in this course during my first semester at RIT from January 2023 to M
 word ' and ' and the last ' l ' in the word ' Carroll ' appear in the same column):
   >
   >"Begin at the
+  >
   >beginning,", the King
+  >
   >said, very gravely, "and
+  >
   >go on till you come to
+  >
   >the end: then stop."
+  >
   >          -Lewis Carroll
