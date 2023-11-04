@@ -1,0 +1,5 @@
+# A Pokemon Battle to Remember
+### Grace Texana Long Torales - gtl1500@g.rit.edu
+#### How is this lab an example of reuse through inheritance
+<p>In this lab, I created a base Pokemon class (Type.NORMAL) from which all of the other (child) Pokemon classes inherit. This means that I did not have to recreate methods that remain constant across Pokemon types, particularly the loseHealth method and the toString method. Instead, the FirePokemon, GrassPokemon, and WaterPokemon all inherited these methods from the Pokemon class, allowing me to call a Pokemon method for a FirePokemon/GrassPokemon/WaterPokemon. All Pokemon have the capacity to lose health and the information printed from each Pokemon was consistent. This saved me time and also saved me effort when I had to go back to fix errors.</p>
+<p>Furthermore, it made the specialized code for each of the subclasses easier to read and comprehend. The differences between each Pokemon are very simple and are reflected as such in the code.</p>

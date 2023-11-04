@@ -1,0 +1,5 @@
+orange rectangle with grey outline at position (5, 80) with height 62.16 and width 90.71
+orange rectangle with red outline at position (5, 83) with height 44.75 and width 68.57
+green circle with orange outline at position (47, 80) with radius 57.65
+green rectangle with green outline at position (74, 67) with height 89.63 and width 83.23
+green triangle with green outline at position (6, 91) with side length 14.39

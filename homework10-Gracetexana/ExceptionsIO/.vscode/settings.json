@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.codeGeneration.generateComments": true,
+    "java.import.maven.enabled": true,
+    "java.import.maven.offline.enabled": true
+}

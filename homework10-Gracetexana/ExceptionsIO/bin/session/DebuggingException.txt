@@ -1,0 +1,6 @@
+/*
+ * Grace Texana Long Torales
+ * gtl1500@g.rit.edu
+ */
+The root cause on the left side is that array a is longer than array b. int i counts up until the end of array a, but if a is longer than b, i goes past the last index of b.
+Dog d's name is null, so calling d.name.equals(this.name) throws a NullPointerException because there is nothing for d.name to refer to.
