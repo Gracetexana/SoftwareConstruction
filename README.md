@@ -5,9 +5,10 @@ I enrolled in this course during my first semester at RIT from January 2023 to M
 ## [Homework 1](homework01-Gracetexana):
 
 [Problem 1](homework01-Gracetexana/Carroll.java)  
-  >Create a class that, when executed, it prints the following quote line-by-line (note that the ' d ' in the
+  
+Create a class that, when executed, it prints the following quote line-by-line (note that the ' d ' in the
 word ' and ' and the last ' l ' in the word ' Carroll ' appear in the same column):
-  >
+  
   >     "Begin at the
   >     beginning,", the King
   >     said, very gravely, "and
